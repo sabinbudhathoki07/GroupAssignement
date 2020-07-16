@@ -1,0 +1,39 @@
+.contract_container{
+    background-color:#F6F2F2;
+}
+.paper{
+    width:1300x;
+    display: flex;
+    
+}
+
+.paper img{
+    width: 500px;
+    margin-top: 20px;
+    margin-left: 400px;
+
+}
+button{
+    height: 50px;
+    width:150px;
+    background-color: darkgreen;
+    color: #ffffff;
+    margin-top: 300px;
+    margin-left: 100px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(20, 114, 61);
+}
+.paper_details{
+    width: 1366px;
+    background-color:#c9c2c2;
+    margin: 0;
+    padding: 10px;
+
+}
+.paper_details h3{
+    text-align: center;
+}
