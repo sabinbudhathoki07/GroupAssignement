@@ -26,4 +26,9 @@ urlpatterns = [
     path('aboutus',views.aboutus),
     path('faq',views.faq),
     path('moreinformation',views.moreinformation),
+    path('dashboard',views.dashboard),
+    path('upload',views.upload),
+    path('page',views.page),
+    path('post_edit/<int:id>',views.post_edit),
+    path('apply',views.apply),
 ]
