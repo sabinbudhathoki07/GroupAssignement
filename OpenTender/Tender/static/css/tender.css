@@ -1,0 +1,95 @@
+.tender-main{
+    height: auto;
+    background-color:transparent;
+    margin-top: 5px;
+    width: 85%;
+    margin: auto;
+}
+.tender-main a{
+    height: 40px;
+    width: 200px;
+    margin: 30px 30px 0 0;
+    background-color:inherit;
+    font-size: 18px;
+    float: left;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.tender-main a:hover{
+    font-size: 20px;
+}
+.current-tender{
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    float: left;
+}
+.tender-display{
+    width: 500px;
+    height: 700px;
+    background-color: rgb(170, 168, 168);
+    display: block;
+}
+/*heading*/
+.tender-display h2{
+    padding:5px 0 0 20px ;
+    color: #000;
+}
+/*image section*/
+.tender-image{
+    height:300px ;
+    width: 91%;
+    background-color: yellow;
+    margin-top: 20px;
+}
+.tender-image img{
+    width: 100%;
+    height: 100%;
+}
+/*description part*/
+.tender-description{
+    height:270px ;
+    width: 95%;
+    background-color: rgb(202, 198, 198);
+    margin-top: 10px;
+    border-radius: 3px;
+}
+.tender-description table{
+    height: 100%;
+    width: 100%;
+    color: #000;
+    font-weight: 400;
+}
+table, th, td{
+    border: none;
+    border-collapse: collapse;
+    background-color: transparent;
+}
+/*more information */
+.more-information{
+    height: 35px;
+    width: 95%;
+    background-color:inherit;
+    margin-top: 15px;
+}
+
+.more-information{
+    height: 35px;
+    width: 95%;
+    background-color: inherit;
+    margin: 12px;
+}
+.more-information button{
+    font-size: 15px;
+    font-weight: bold;
+    height: 35px;
+    width: 100%;
+    background-color: blue;
+    outline-style: none;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}

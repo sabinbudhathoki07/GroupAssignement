@@ -1,62 +1,84 @@
+*{
+    padding: 0;
+    margin: auto;
+    font-family: sans-serif;
+}
 body{
-    background-image: url(phone.png);
-	height: 100vh;
-	background-size: cover;
-	background-position: center;
+    background-image: url("../image/login.jpg"); 
+    background-size: cover;
 }
-.login-page{
-	width: 360px;
-	padding: 10% 0 0;
-	margin: auto;
+.logo{
+    height: 200px;
+    width: 230px;
+    background-color:transparent;
+    float: left;
+    position: absolute;
+    top: 30%;
+    left: 15%;
 }
-
-.form{
-	position: relative;
-	z-index: 1;
-	background: rgba(7,40,195,0.8);
-	max-width: 360px;
-	margin: 0 auto 100px;
-	padding: 45px;
-	text-align: center;
+.logo img{
+    max-width: 100%;
+    max-height:100%;
 }
-.form input{
-	font-family: "Roboto", sans-serif;
-	outline: 1;
-	background:#F2F2F2 ;
-	width: 100%;
-	border: 0;
-	margin: 0 0 15px;
-	padding: 15px;
-	box-sizing: border-box;
-	font-size: 14px;
+.login-form, .signup-form{
+    width: 500px;
+    height: 90vh;
+    background-color: rgba(238, 244, 245, 0.9);
+    margin:25px 100px 0 0;
+    float: right;
+    border-radius: 10px;
+    color: black;
+    padding:20px 0 0 30px;
 }
-.form button{
-	font-family: "Roboto", sans-serif;
-	text-tarnsform: uppercase;
-	outline: 0;
-	background: #4CAF50;
-	width: 100%;
-	border: 0;
-	padding: 15px;
-	color: #FFFFFF;
-	font-size: 14px;
-	cursor: pointer;
+.signup-form label{
+    color: #0c0c0c;
+    text-decoration: none;
+    font-size: 15px;
 }
-.form button:hover,.form button:active{
-	background: #43A047;
+.login-form h1, .signup-form h1{
+    margin-bottom: 15px;
 }
-
-.form .message{
-	margin: 15px 0 0;
-	color: aliceblue;
-	font-size:12px;
+.login-form a{
+    color: rgb(8, 58, 128);
+    text-decoration: underline;
+    font-weight: bold;
 }
-
-.form .message a{
-	color: #4CAF50;
-	text-decoration: none;
+.login-form form, .signup-form form{
+    margin: 50px 0 0 0;
 }
-
-.form .register-form{
-	display: none;
+.login-form form label,.signup-form form label{
+    font-size: 14px;
+    color: #000;
+    text-decoration: none;
+    float: left;
+}
+.login-form input,.signup-form input{
+    height: 40px;
+    width: 470px;
+    border-top:none;
+    border-left: none;
+    border-right: none;
+    background-color: transparent;
+    margin-bottom: 10px;
+    outline-style: none;
+    color: #000;
+    border-bottom: 1px solid black;
+}
+.login-form button,.signup-form button{
+    margin: 30px 0 0 170px;
+    height: 50px;
+    width: 120px;
+    color: #fff;
+    background-color: blue;
+    border: none;
+    outline-style: none;
+    border-radius: 5px;
+}
+.login-form p, .signup-form p{
+    font-size: 11px;
+    color: #000;
+    text-decoration: none;
+    position: absolute;
+    top: 93%;
+    margin-left:-20px;
 }

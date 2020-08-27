@@ -2,15 +2,12 @@
 <html>
 <head>
   <title></title>
-   <link rel="stylesheet" href="dashbord.css">
- 
-
+  {% load static %}
+   <link rel="stylesheet" href="{% static 'css/dashbord.css' %}">
+   <link rel="stylesheet" href="{% static 'css/upload.css' %}">
+   <link rel="stylesheet" href="{% static 'css/page.css' %}">
 </head>
 <body>
-
-
-
-
 <svg style="display:none;">
   <symbol id="down" viewBox="0 0 16 16">
     <polygon points="3.81 4.38 8 8.57 12.19 4.38 13.71 5.91 8 11.62 2.29 5.91 3.81 4.38" />
@@ -59,7 +56,7 @@
 <header class="page-header">
   <nav>
     <a href="#0">
-      <img class="logo" src=""alt="logo">
+      <img src="{% static 'image/logo.png' %}" alt="">
     </a>
     <button class="toggle-mob-menu" aria-expanded="false" aria-label="open menu">
       <svg width="20" height="20" aria-hidden="true">
@@ -71,7 +68,7 @@
         <h3>Admin</h3>
       </li>
       <li>
-        <a href="#0">
+        <a href="/page">
           <svg>
             <use xlink:href="#pages"></use>
           </svg>
@@ -83,7 +80,7 @@
           <svg>
             <use xlink:href="#users"></use>
           </svg>
-          <span>Users</span>
+          <span>Participant</span>
         </a>
       </li>
       <li>
@@ -95,11 +92,11 @@
           </a>
       </li>
       <li>
-        <a href="#0">
+        <a href="/upload">
           <svg>
             <use xlink:href="#collection"></use>
           </svg>
-          <span>Collection</span>
+          <span>Upload</span>
         </a>
       </li>
       <li>
@@ -176,24 +173,10 @@
       </div>
     </div>
   </section>
-  <section class="grid">
-    <article></article>
-    <article></article>
-    <article></article>
-    <article></article>
-    <article></article>
-    <article></article>
-    <article></article>
-    <article></article>
-  </section>
-  <footer class="page-footer">
- 
-  </footer>
-</section>
+  {% block content %}
+  {% endblock %}
 
-
-
-   <script src="dashbord.js"></script> 
+   <script src="{% static 'javascript/dashbord.js' %}"></script> 
 </body>
 </html>
 

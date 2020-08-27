@@ -1,0 +1,36 @@
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/login.css' %}">
+        <title>OpenTender || Nepal</title>
+    </head>
+    <body>
+        <div class="logo">
+            <a href="/login"><img src="{% static 'image/logo.png' %}" alt=""></a> 
+        </div>
+        <div class="signup-form">
+            <h1>Sign Up</h1>
+            <label >It is easy to join us, hope to see you again!</label>
+            <form action="/signup" method='POST' enctype="multipart/form-data">
+                {% load static %}
+		        {% csrf_token %}
+                <label>Email Address</label><br>
+                <input type="email" name="Email" id="Email" placeholder="Email"><br>
+                <label>Phone No.</label><br>
+                <input type="text" name="Phone_No" id="phoneno." placeholder="phoneno."><br>
+                <label>Password</label><br>
+                <input type="password" name="Password" id="Password" placeholder="Password"><br>
+                <label>Confirm Password</label><br>
+                <input type="password" name="Confirm_Password" id="Confirm_Password" placeholder="Confirm_Password"><br>
+                <label>Company Name</label><br>
+                <input type="text" name="Company_name" id="Company_name" placeholder="Company_name"><br>
+                <button>Sign Up</button>
+            </form>
+            <p>
+                <a href="#">Privacy?</a>  of one's are maintained under the rules and regulation of the company and government
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% block content %}
+{% load static %}
+    <div class="tender-main">
+            <h1>TENDERS</h1>
+            <a>Current Tender</a>
+            <a>Past Tender</a>
+            <div class="current-tender">
+                <div class="tender-display">
+                    <div class="tender-image">
+                        <img src="{% static 'image/login.jpg' %}" alt="">
+                    </div>
+                    <h2>Title of the tender</h2>
+                    <div class="tender-description">
+                        <table class="table">
+                                <tr>
+                                    <td>Tender :</td>
+                                    <td class="text-left"> papu construction suppliers</td>
+                                </tr>
+                                <tr>
+                                    <td>Status :</td>
+                                    <td class="text-left">ongoing</td>
+                                </tr>
+                                <tr>
+                                    <td>Date :</td>
+                                    <td class="text-left">2nd August Onwards</td>
+                                </tr>
+                                <tr>
+                                    <td>Tender Type :</td>
+                                    <td class="text-left">open tender</td>
+                                </tr>
+                                <tr>
+                                    <td> Business Scale:</td>
+                                    <td class="text-left">medium</td>
+                                </tr>
+                                <tr>
+                                    <td> Application Fee:</td>
+                                    <td class="text-left">Rs, 5000</td>
+                                </tr>
+                        </table>
+                    </div>
+                    <form action="/moreinformation" class="more-information"><button>More Information</button></form>
+                </div>
+            </div>  
+    </div>
+{% endblock %}

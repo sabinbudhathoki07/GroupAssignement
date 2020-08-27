@@ -1,0 +1,72 @@
+.main-tender-detail{
+    height: auto;
+    background-color:r#fff;
+    margin-top: 5px;
+    width: 85%;
+    margin-top: 20px;
+}
+.tender-detail{
+    height: 700px;
+    width: 49.5%;
+    float: left;
+    background-color: rgb(236, 236, 223);
+}
+.tender-detail h2, h3,ul{
+    padding: 20px 20px 0 20px;
+}
+.tender-detail ul li{
+    color: #000;
+    font-size: 14px;
+    word-wrap: break-word;
+    width: 90%;
+}
+.tender-detail table{
+    height: 40%;
+    width: 95%;
+    color: #000;
+    font-weight: 400;
+    margin: 10px 10px 10px 13px;
+}
+table, th, td{
+    border: none;
+    border-collapse: collapse;
+    background-color:rgb(184, 184, 177) ;
+}
+/*form*/
+.tender-application-form{
+    height: 700px;
+    width: 49.5%;
+    float: right;
+    background-color:rgb(236, 236, 223);
+}
+.tender-application-form h2{
+    text-align: center;
+    margin-top: 20px;
+}
+.tender-application-form table{
+    height: 20%;
+    width: 95%;
+    color: #000;
+    font-weight: 400;
+    margin: 10px 10px 10px 13px;
+}
+.apply-form{
+    background-color: transparent   ;
+    width: 530px;
+    height: 400px;
+    margin: 10px 0 0 80px;
+    overflow: hidden;
+}
+.apply-form input, button{
+    width: 400px;
+    height: 30px;
+    margin-bottom: 10px;
+    outline-style: none;
+    border-style: none;
+    color: black;
+    font-size: 15px;
+}
+.apply-form button{
+   background-color: blue;
+   color: #fff;
+}

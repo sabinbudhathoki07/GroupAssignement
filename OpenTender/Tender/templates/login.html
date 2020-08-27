@@ -1,60 +1,34 @@
-<html>
-<head>
-<title> Login Form</title>
- <link rel="stylesheet" href="login.css">
- </head>
-  
-<body>
-  <div class="login-page">
- 
-
-
-
-
-   <div class="form">
-        <form class="register-form" name="myform" method="post" onsubmit="return validateform()">
-        <input type="text" name="name" placeholder="User Name">
-        <input type="email" name="" placeholder="Email Id">
-        <input type="password" name="password" placeholder="Enter Password">
-   <button type="submit">Create</button>
-   <p class="message">Already Account? <a href="#">Login</a></p>
-   </form>
-   
-  
-   <form class="login-form">
-   <input type="text" name="" placeholder="User Name">
-   <input type="Password" name="" placeholder="Enter Password">
-   <button>Login</button>
-   <p class="message">Not Registered? <a href="#">SignUp</a></p>
-   </form>
-   </div>
-   </div>
-   
-   <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
-   
-   
-   <script>
-   $('.message a').click(function(){
-   $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
-   });
-   
-   </script>
-   <script>  
-function validateform(){  
-var name=document.myform.name.value;  
-var password=document.myform.password.value;  
-  
-if (name==null || name==""){  
-  alert("Name can't be blank");  
-  return false;  
-}else if(password.length<6){  
-  alert("Password must be at least 6 characters long.");  
-  return false;  
-  }  
-}  
-</script>
-   
-   
-   
-</body>
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/login.css' %}">
+        <title>OpenTender || Nepal</title>
+    </head>
+    <body>
+        <div class="logo">
+            <a href="/"><img src="{% static 'image/logo.png' %}" alt=""></a> 
+        </div>
+        <div class="login-form">
+            <h1>Sign in</h1>
+            <label >new user?</label>
+             <a href="/signup"> create an account </a>
+            <form action="/entry" method='POST'>
+                {% load static %}
+                {% csrf_token %}
+                <label>Email Address</label><br>
+                <input type="email" name="Email"  placeholder="Email" required="" ><br>
+                <label>Password</label><br>
+                <input type="password" name="Password" placeholder="Password" required="" ><br>
+                <button>login</button>
+            {% for message in messages %}
+            {{ message }}
+            {% endfor %}
+            </form>
+            <p>
+                <a href="#">Privacy?</a>  of one's are maintained under the rules and regulation of the company and government
+            </p>
+        </div>
+    </body>
 </html>

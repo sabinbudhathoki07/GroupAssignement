@@ -1,8 +1,14 @@
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/notice.css' %}">
+    <link rel="stylesheet" href="{% static 'css/tender.css' %}">
+    <link rel="stylesheet" href="{% static 'css/aboutus.css' %}">
+    <link rel="stylesheet" href="{% static 'css/moreinformation.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>OpenTender || Nepal</title>
 </head>
@@ -15,57 +21,73 @@
                 <a href="#" class="fa fa-twitter"></a>
                 <a href="#" class="fa fa-facebook"></a>	
             </div>
-            <div class="logo">
-                <img src="logo.png" alt="">
+            <div class="tender-logo">
+                <img src="{% static 'image/logo.png' %}" alt="">
             </div>
             <div class="btn">
-                <button>&#x1F517; Join Us</button>
+                <button><a href="/login">&#x1F517; Join Us</a></button>
             </div>
         </div>
         <nav>
             <div class="menu">
                 <a href="/">Headline</a>
-                <a href="">About Us</a>
-                <a href="">Notice</a>
-                <a href="">News</a>
-                <a href="">Tender</a>
+                <a href="/aboutus">About Us</a>
+                <a href="/notice">Notice</a>
+                <a href="">Transaction</a>
+                <a href="/tender">Tender</a>
             </div>
             <form class="search" action="">
                     <input type="text" placeholder="Search.." name="search">
-                    <button type="submit">search</button>   
+                    <button>search</button>
             </form>
         </nav>
         <div class="breaking-news">
-
+            <marquee behavior="scroll" direction="left">The OpenTender is opens the Nepal's best Tender. TO get connected with us. Please! do not forget to sign into OpenTender</marquee>
         </div>
     </header>
-    <div class="main">
-       <section class="highlight">
-           <article></article>
-           <div class="highlight-img"></div>
-       </section>
-       <section class="info">
-           <div class="category-search"></div>
-           <div class="category-list"></div>
-           <div class="government-notice"></div>
-       </section>
-       <section class="Tender">
-           <div class="tender-ads">
-               <div class="tender-img"></div>
-               <div class="tender-text"></div>
-           </div>
-           <div class="tender-ads">
-                <div class="tender-img"></div>
-                <div class="tender-text"></div>
-           </div>
-           <div class="tender-ads">
-                <div class="tender-img"></div>
-                <div class="tender-text"></div>
-           </div>
-       </section>
-    </div>
+        {% block content %}
+        {% endblock %}
     <footer>
-
+        <div class="flex-menu">
+            <div class="footer-menu">
+                <a href="/">Headline</a>
+                <a href="">About Us</a>
+                <a href="/notice">Notice</a>
+                <a href="">Transaction</a>
+                <a href="">Tender</a>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-description">
+            <div class="footer-aboutus">
+                <h2>About Us</h2>
+                <p> The company is established in 2020 A.D. It is the joint company thatworks as business to business transaction. It is the certified company by the Nepal government company registar office. The commencement of activities of company are legit and works under the terms and condition set by the Nepal Government.</p>
+                <a href="/aboutus"> read more>> </a>
+            </div>
+            <div class="footer-company">
+                <h2>Company</h2>
+                    <a href="/faq">FAQs</a>
+                    <a href="#">Event</a>
+                    <a href="#">Our Alies</a>
+                    <a href="#">Our Services</a>
+                    <a href="">Terms & conditions</a>
+            </div>
+            <div class="footer-contact">
+                <h2>Contact</h2>
+                <ul>
+                    <li>&#9742; 9844478291</li>
+                    <li>&#xe568; baluwatar, kathmandu</li>
+                    <li><i class="fa fa-envelope">openTender@gmail.com</i></li>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-google"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-facebook"></a>	
+                </ul>
+            </div>
+        </div>
+        <div class="copyright-container">
+            <p>Copyright&copy; || 2020 www.OpenTender.com</p>
+        </div>
     </footer>
 </body>
 </html>

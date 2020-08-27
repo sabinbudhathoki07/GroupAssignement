@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+{% block content %}
+{% load static %}
+    <div class="main-tender-detail">
+        <div class="tender-detail">
+            <h2>Title of the tender</h2>
+            <table class="tender-table">
+                <tr>
+                    <td>Tender :</td>
+                    <td class="text-left"> papu construction suppliers</td>
+                </tr>
+                <tr>
+                    <td>Status :</td>
+                    <td class="text-left">ongoing</td>
+                </tr>
+                <tr>
+                    <td>Date :</td>
+                    <td class="text-left">2nd August Onwards</td>
+                </tr>
+                <tr>
+                    <td>Tender Type :</td>
+                    <td class="text-left">open tender</td>
+                </tr>
+                <tr>
+                    <td> Business Scale:</td>
+                    <td class="text-left">medium</td>
+                </tr>
+                <tr>
+                    <td> Application Fee:</td>
+                    <td class="text-left">Rs, 5000</td>
+                </tr>
+             </table>
+             <h3>Rules</h3>
+             <ul>
+                 <li>vadgaregagasdygsdcibabehfaouebsfiuhaefbaegfu iaegf uae gfaoegf gaegfabefbeabfaep</li>
+             </ul>
+        </div>
+        <div class="tender-application-form">
+            <h2>Apply For the Tender Here</h2>
+            <table class="tender-table">
+                <tr>
+                    <td>Company :</td>
+                    <td class="text-left"> papu construction suppliers</td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td class="text-left">ongoing</td>
+                </tr>
+                <tr>
+                    <td>Contact:</td>
+                    <td class="text-left">2nd August Onwards</td>
+                </tr>
+             </table>
+             <h3>Register Here</h3>
+             <form class="apply-form" method="post" action="/apply" enctype="multipart/form-data">
+                {% csrf_token %}
+                <label for="">Email</label><br>
+                <input type="email" name="" id=""><br>
+                <label for="">Company Name</label><br>
+                <input type="text" name="" id=""><br>
+                <label for="">Phone no.</label><br>
+                <input type="number" name="" id=""><br>
+                <label for="">Address</label><br>
+                <input type="text" name="" id=""><br>
+                <label for="">Application</label> <br> 
+                {{apply_form.CV_file}} <br>
+                <button>Apply</button>
+             </form>
+        </div>
+    </div>
+{% endblock %}

@@ -1,8 +1,13 @@
 *{
     padding: 0;
     margin: auto;
+    
+    font-family: sans-serif;
+}
+body{
     width: 1360px;
 }
+/*header*/
 header{
     overflow: hidden;
     width: 100%;
@@ -29,14 +34,14 @@ header{
 .fa:hover {
     opacity: 0.7;
 }
-.logo{
-    height: inherit;
+.tender-logo{
+    height: 130px;
     width: 230px;
     background:inherit;
     float: left;
     margin-left:50px;
 }
-.logo img{
+.tender-logo img{
     max-width: 100%;
     max-height: 100%;
     display: block;
@@ -54,6 +59,10 @@ header{
     border-color:rgb(22, 114, 175) ;
     border-radius: 3px;
 }
+.btn a{
+    text-decoration: none;
+}
+/*navbar*/
 nav{
     width: 100%;
     height: 50px;
@@ -62,19 +71,19 @@ nav{
 }
 .menu{
     height: inherit;
-    width: 500px;
+    width: 550px;
     background-color: inherit;
     float: left;
     margin-left: 90px;
 }
 .menu a{
-    font-family: Arial  ;
     font-size: 20px;
     line-height: 50px;
     margin-left: 20px;
     text-decoration: none;
     color: ivory;
 }
+/*search bar*/
 form.search{
     height: inherit;
     width: 500px;
@@ -90,103 +99,151 @@ form.search input{
     font-size: 14px;
     padding-left: 10px;
     border-style: none;
+    float: left;
 }
 form.search button{
     height: inherit;
     width: 100px;
-    float: right;
     background-color: inherit;
     border-style: none  ;
 }
+/*news slider*/
 .breaking-news{
     height: 40px;
-    width: 100%;
+    width: 90%;
     float: left;
     background-color: rgb(35, 35, 37);
+    padding:0 5% 0 5%;
 }
-/*main*/
-.main{
-    width: 1150px;
-    height: 1000px;
-    margin: auto;
-    background-color: white;
+.breaking-news marquee{
+    color: #fff;
+    line-height: 40px;
+}
+/*footer*/
+footer{
+    overflow: hidden;
+    width: 100%;
+    background-color: black;
+    height: auto;
     margin-top: 20px;
-}
-section.highlight{
-    width: 800px;
-    height: 400px;
-    background-color: rgb(199, 199, 43);
     float: left;
 }
-section.highlight article{
-    height: inherit;
-    width: 300px;
-    background-color: red;
-    float: left;
-}
-.highlight-img{
-    height: inherit;
-    width: 500px;
-    background-color: green;
-    float: right;
-}
-.highlight-img img{
-    max-width: 100%;
-    max-height: 100%;
-}
-section.info{
-    width: 330px;
-    height: 650px;
+footer hr{
+    width: 98%;
     background-color: white;
-    float: right;
+    height: 1px;
+    border: none;
 }
-.category-search{
-    width: inherit;
-    height: 250px;
-    background-color: yellow;
+/*footer-nav*/
+.flex-menu{
+    display: flex;
+    justify-content: center;
+    background-color:inherit;
+    width: 100%;
+    height: 40px;
+}
+.footer-menu{
+    height: inherit;
+    width: 460px;
+    background-color: inherit;
     float: left;
 }
-.category-list{
-    width: inherit;
-    height: 150px;
-    background-color:green;
-    float: left;
+.footer-menu a{
+    font-size: 17px;
+    line-height: 50px;
+    margin-left: 20px;
+    text-decoration: none;
+    color: ivory;
 }
-.government-notice{
-    width: inherit;
-    height: 220px;
-    background-color:red;
-    float: left;
-    margin-top: 30px;
-}
-section.Tender{
-    width: 800px;
-    height: 220px;
-    background-color: white;
-    float: left;
-    margin-top: 30px;
+/*footer-description*/
+.footer-description{
+    height: 180px;
+    background-color: inherit;
+    width: 85%;
     display: flex;
     justify-content: space-around;
+    overflow: hidden;
 }
-.tender-ads{
+.footer-description h2{
+    color: #fff;
+    padding-top: 10px;
+    text-decoration: underline;
+}
+/*about us*/
+.footer-aboutus p{
+    width: inherit;
+    color: #fff;
+    font-size: 14px;
+    text-align: justify;
+    word-wrap: break-word;
+    margin-top: 10px;
+}
+.footer-aboutus{
+    width: 500px;
     height: inherit;
-    width: 220px;
-    background-color: white;
+    background-color: inherit;
+    float: left;
+    color: #fff;
+    font-size: 14px;
+    padding:0 10px 0 10px;
+    text-align: justify;
+    text-decoration: none;
+}
+.footer-aboutus a{
+    text-decoration: underline;
+    color: #fff;
+}
+/*company*/
+.footer-company{
+    width: 260px;
+    height: inherit;
+    background-color: inherit;
+    float: left;
+    padding-left: 40px;
+}
+.footer-company a{
+   text-decoration: none;
+   color: ivory;
+   display: block;
+   float: none;
+   font-size: 14px;
+   margin-top: 5px;
+}
+/*contact*/
+.footer-contact{
+    width: 280px;
+    height: inherit;
+    background-color: inherit;
     float: left;
 }
-.tender-img{
-    height: 150px;
-    width: inherit;
-    background-color: yellow;
+.footer-contact ul{
+    list-style:none;
+    padding: 5px 0 0 20px
+}
+.footer-contact li{
+    color: #fff;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.footer-contact i{
+    color: #fff;
+    font-size: 14px;
+    margin-top:5px;
+    padding:0;
+}
+.footer-contact a{
+    color: #fff;
+    margin-top: 5px;
     float: left;
 }
-.tender-img img{
-    max-width: 100%;
-    max-height: 100%;
+/*copyright*/
+.copyright-container{
+    height: 30px;
+    background-color: inherit;
 }
-.tender-text{
-    height: 70px;
-    float: left;
-    width: inherit;
-    background-color: green;
+.copyright-container p{
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
 }

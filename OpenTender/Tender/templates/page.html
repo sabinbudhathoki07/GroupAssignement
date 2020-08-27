@@ -1,0 +1,53 @@
+{% extends "dashboard.html" %}
+{% block content %}
+{% load static %}
+    <section class="page-content">
+        <h1>Posts Details   </h1>
+        <div class="post-content">
+            {% for post in posts %}
+            <table class="table">
+                <tr>
+                    <td>Tender_Id :</td>
+                    <td class="text-left"> {{ post.post_id }}</td>
+                </tr>
+                <tr>
+                    <td>Tender :</td>
+                    <td class="text-left"> {{ post.Tender_Name }}</td>
+                </tr>
+                <tr>
+                    <td>Status :</td>
+                    <td class="text-left">{{ post.Status }}</td>
+                </tr>
+                <tr>
+                    <td>Date :</td>
+                    <td class="text-left">{{ post.Date }}</td>
+                </tr>
+                <tr>
+                    <td>Tender Type :</td>
+                    <td class="text-left">{{ post.Tender_Type }}</td>
+                </tr>
+                <tr>
+                    <td> Business Scale:</td>
+                    <td class="text-left">{{ post.Business_Scale }}</td>
+                </tr>
+                <tr>
+                    <td> Application Fee:</td>
+                    <td class="text-left">Rs, {{ post.Entry_Fee }}</td>
+                </tr>
+                <tr>
+                    <td>Rules and Regulations:</td>
+                    <td class="text-left">{{ post.Rules_Regulation}}</td>
+                </tr>
+                <tr>
+                    <td> Tender_Image:</td>
+                    <td class="text-left"><img height="70px" width="100px" src="{% static '/file/' %}{{ post.Tender_Image}}" /></td>
+                </tr>
+                <tr>
+                    <td><a href="/post_edit/{{ post.post_id }}"><button>EDIT</button></a> </td>
+                    <td class="text-left"><a href=""><button>DELETE </button></a>   </td>
+                </tr> 
+            </table>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

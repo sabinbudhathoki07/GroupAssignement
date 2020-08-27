@@ -1,0 +1,29 @@
+.upload-form{
+    height: auto;
+    width: 400px;
+    background-color: inherit;
+    float: left;
+    margin-left: -200px;
+    color: #000;
+    font-size: 19px;
+}
+.page-content h1{
+    margin:-40px 0 10px -200px;
+    font-size: 40px;
+}
+.upload-form label{
+    font-size:20px ;
+}
+.upload-form input,select{
+    font-size:20px ;
+    width: 500px;
+    height: 30px;
+}
+.upload-form button{
+    width: 500px;
+    height: 40px;
+    background-color: blue;
+    border-radius: 5px;
+    outline-style: none;
+    margin-top: 20px;
+}

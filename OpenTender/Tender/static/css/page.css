@@ -1,0 +1,23 @@
+.post-content{
+    margin: 20px 20px 0 -200px;
+    height: auto;
+    width: 1000px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around   ;
+}
+.table{
+    width: 450px;
+    background-color: rgb(180, 174, 174);
+    overflow: hidden;
+}
+.table button{
+    background-color: blue;
+    height: 30px;
+    width: 225px;
+    color: white;
+    border: none;
+    outline-style: none;
+    font-weight: bold;
+    font-size:17px;
+}
