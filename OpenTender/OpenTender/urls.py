@@ -17,21 +17,24 @@ from django.contrib import admin
 from django.urls import path
 from Tender import views
 
+admin.site.site_header = "Open Tender Admin Dashboard"
+admin.site.site_title = "Open Tender Admin Dashboard"
+admin.site.index_title = "Open Tender Administration"
+
 urlpatterns = [
+    path('admin/', admin.site.urls),
     path('',views.index),
     path('notice',views.notice),
-    path('login', views.login, name='login'),
-    path('entry', views.entry, name="entry"),
-    path('dashboard', views.dashboard, name='dashboard'),
-    path("dashboard/'<int:id>'", views.dashboard, name='dashboard'),
-    path('signup',views.signup, name='signup'),
+    path('login',views.login),
+    path('signup',views.signup),
+    path('entry', views.entry),
+    path("dashboard/'<int:id>'", views.dashboard),
     path('tender',views.tender),
     path('aboutus',views.aboutus),
     path('faq',views.faq),
     path('moreinformation',views.moreinformation),
-
     path('upload',views.upload),
-    path('page',views.page),
     path('post_edit/<int:id>',views.post_edit),
-    path('apply',views.apply),
+    path('update/<int:id>',views.post_update),
+    path('delete/<int:id>',views.post_delete),
 ]
