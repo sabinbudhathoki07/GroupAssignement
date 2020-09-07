@@ -35,5 +35,5 @@ urlpatterns = [
     path("upload/'<int:id>'",views.upload),
     path('post_edit/<int:id>',views.post_edit),
     path('update/<int:id>',views.post_update),
-    path('delete/<int:id>',views.post_delete),
+   
 ]

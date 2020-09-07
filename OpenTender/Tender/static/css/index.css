@@ -6,17 +6,46 @@
     background-color: white;
     margin-top: 20px;
 }
+
+
+@media only screen and (max-width: 340px) {
+.main{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background-color: white;
+    margin-top: 5px;
+}
+}
+
 section.highlight{
     width: 800px;
     height: 400px;
     background-color: rgb(199, 199, 43);
     float: left;
 }
+@media only screen and (max-width: 340px) {
+section.highlight {
+    width: 340px;
+    height: 200px;
+    background-color: rgb(199, 199, 43);
+    float: left;
+}
+}
 section.highlight article{
     height: inherit;
     width: 300px;
     background-color: red;
     float: left;
+}
+@media only screen and (max-width: 340px) {
+section.highlight article {
+    height: inherit;
+    width: 340px;
+    background-color: red;
+    float: left;
+}
+
 }
 .highlight-img{
     height: inherit;
@@ -34,17 +63,43 @@ section.info{
     background-color: white;
     float: right;
 }
+@media only screen and (max-width: 340px) {
+section.info {
+    width: 340;
+    height: 650px;
+    background-color: white;
+    float: left;
+}
+}
 .category-search{
     width: inherit;
     height: 250px;
     background-color: yellow;
     float: left;
 }
+@media only screen and (max-width: 340px) {
+    .category-search{
+    width: inherit;
+    height: 200px;
+    background-color: yellow;
+    float: left;
+}
+}
+
 .category-list{
     width: inherit;
     height: 150px;
     background-color:green;
     float: left;
+}
+@media only screen and (max-width: 340px) {
+
+    .category-list{
+    width: inherit;
+    height: 150px;
+    background-color:green;
+    float: left;
+}
 }
 .government-notice{
     width: inherit;
@@ -53,6 +108,17 @@ section.info{
     float: left;
     margin-top: 30px;
 }
+@media only screen and (max-width: 340px) {
+.government-notice{
+    width: inherit;
+    height: 220px;
+    background-color:red;
+    float: left;
+    margin-top: 1px;
+  
+}
+}
+
 section.Tender{
     width: 800px;
     height: 220px;
