@@ -7,32 +7,32 @@
             <table class="tender-table">
                 <tr>
                     <td>Tender :</td>
-                    <td class="text-left"> papu construction suppliers</td>
+                    <td class="text-left"> {{ post.Tender_Name }}</td>
                 </tr>
                 <tr>
                     <td>Status :</td>
-                    <td class="text-left">ongoing</td>
+                    <td class="text-left">{{ post.Status }}</td>
                 </tr>
                 <tr>
                     <td>Date :</td>
-                    <td class="text-left">2nd August Onwards</td>
+                    <td class="text-left">{{ post.Date }}</td>
                 </tr>
                 <tr>
                     <td>Tender Type :</td>
-                    <td class="text-left">open tender</td>
+                    <td class="text-left">{{ post.Tender_Type }}</td>
                 </tr>
                 <tr>
                     <td> Business Scale:</td>
-                    <td class="text-left">medium</td>
+                    <td class="text-left">{{ post.Business_Scale }}</td>
                 </tr>
                 <tr>
                     <td> Application Fee:</td>
-                    <td class="text-left">Rs, 5000</td>
+                    <td class="text-left">Rs,{{ post.Entry_Fee }}</td>
                 </tr>
              </table>
              <h3>Rules</h3>
              <ul>
-                 <li>vadgaregagasdygsdcibabehfaouebsfiuhaefbaegfu iaegf uae gfaoegf gaegfabefbeabfaep</li>
+                 <li>{{ post.Rules_Regulation}}</li>
              </ul>
         </div>
         <div class="tender-application-form">
@@ -55,15 +55,16 @@
              <form class="apply-form" method="post" action="/apply" enctype="multipart/form-data">
                 {% csrf_token %}
                 <label for="">Email</label><br>
-                <input type="email" name="" id=""><br>
+                <input type="email" name="Email" id=""><br>
                 <label for="">Company Name</label><br>
-                <input type="text" name="" id=""><br>
+                <input type="text" name="Company_Name" id=""><br>
                 <label for="">Phone no.</label><br>
-                <input type="number" name="" id=""><br>
+                <input type="number" name="Phone_no" id=""><br>
                 <label for="">Address</label><br>
-                <input type="text" name="" id=""><br>
+                <input type="text" name="Address" id=""><br>
                 <label for="">Application</label> <br> 
                 {{apply_form.CV_file}} <br>
+                <input type="number" value="{{post.id}}" id="foreign" name="post">
                 <button>Apply</button>
              </form>
         </div>

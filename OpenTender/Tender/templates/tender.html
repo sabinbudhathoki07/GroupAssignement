@@ -3,44 +3,44 @@
 {% load static %}
     <div class="tender-main">
             <h1>TENDERS</h1>
-            <a>Current Tender</a>
-            <a>Past Tender</a>
             <div class="current-tender">
+                {% for post in posts %}
                 <div class="tender-display">
                     <div class="tender-image">
-                        <img src="{% static 'image/login.jpg' %}" alt="">
+                        <img src="{% static '/file/' %}{{ post.Tender_Image}}" alt="">
                     </div>
                     <h2>Title of the tender</h2>
                     <div class="tender-description">
                         <table class="table">
                                 <tr>
                                     <td>Tender :</td>
-                                    <td class="text-left"> papu construction suppliers</td>
+                                    <td class="text-left"> {{ post.Tender_Name }}</td>
                                 </tr>
                                 <tr>
                                     <td>Status :</td>
-                                    <td class="text-left">ongoing</td>
+                                    <td class="text-left">{{ post.Status }}</td>
                                 </tr>
                                 <tr>
                                     <td>Date :</td>
-                                    <td class="text-left">2nd August Onwards</td>
+                                    <td class="text-left">{{ post.Date }}</td>
                                 </tr>
                                 <tr>
                                     <td>Tender Type :</td>
-                                    <td class="text-left">open tender</td>
+                                    <td class="text-left">{{ post.Tender_Type }}</td>
                                 </tr>
                                 <tr>
                                     <td> Business Scale:</td>
-                                    <td class="text-left">medium</td>
+                                    <td class="text-left">{{ post.Business_Scale }}</td>
                                 </tr>
                                 <tr>
                                     <td> Application Fee:</td>
-                                    <td class="text-left">Rs, 5000</td>
+                                    <td class="text-left">Rs,{{ post.Entry_Fee }}</td>
                                 </tr>
                         </table>
                     </div>
-                    <form action="/moreinformation" class="more-information"><button>More Information</button></form>
+                    <form action="/moreinformation/{{ post.id }}" class="more-information"><button>More Information</button></form>
                 </div>
+                {% endfor %}
             </div>  
     </div>
 {% endblock %}

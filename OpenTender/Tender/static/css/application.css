@@ -1,0 +1,28 @@
+.applicant{
+    height: auto;
+    background-color:white;
+    width: 900px;
+    overflow: hidden;
+    margin: 0 0 0 -200px;
+}
+.applicant table{
+    height: auto;
+    width: 100%;
+    background-color: transparent;
+    display: block;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+}
+.applicant-table td, .applicant-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+.applicant-table tr:nth-child(even){background-color: #f2f2f2;}
+.applicant-table tr:hover {background-color: #ddd;}
+.applicant-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+  }

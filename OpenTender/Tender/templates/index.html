@@ -1,27 +1,56 @@
 {% extends "layout.html" %}
 {% block content %}
+{% load static %}
 <div class="main">
     <section class="highlight">
-        <article></article>
-        <div class="highlight-img"></div>
+        <div class="highlight-img"><img src="{% static '/image/construction2.jpg' %}" alt=""></div>
+        <article>
+            <h1>Infrastructure and construction</h1>
+            <p>The project winners should be able to supply, Deliver and construct the 15 storied building that meets the standerd of Nepal Government and should be earthquake resistence. The interest companies can apply for the open tender with your working mechanism and the cost of your production</p>
+            <h3>Papu Construction Pvt.Ltd</h2>
+            <b>Date: 21st September, 2020</b>
+            <a href="/tender">learn more>></a>
+        </article>
     </section>
     <section class="info">
-        <div class="category-search"></div>
-        <div class="category-list"></div>
-        <div class="government-notice"></div>
+        <div class="government-notice">
+            <img src="{% static '/image/nepal-gov.png' %}" alt="">
+            <B>Certified By Nepal Government</B>
+        </div>
+        <div class="category-search">
+            <img src="{% static '/image/construct.jpg' %}" alt="">
+        </div>
+        <div class="category-list">
+            <b>Infrastructure and construction</b><br>
+            <p>
+                Corrosion Resistant Coating On Towers And Repair Of Tower Structures, Foundation And Footing <a href="/tender">learn more>></a>
+            </p>
+        </div>
     </section>
     <section class="Tender">
         <div class="tender-ads">
-            <div class="tender-img"></div>
-            <div class="tender-text"></div>
+            <div class="tender-img">
+                <img src="{% static '/image/construct5.png' %}" alt="">
+            </div>
+            <div class="tender-text">
+                <b>Steel Supplier for Car production Company</b>
+            </div>
         </div>
         <div class="tender-ads">
-             <div class="tender-img"></div>
-             <div class="tender-text"></div>
+             <div class="tender-img">
+                <img src="{% static '/image/construct3.jpg' %}" alt="">
+             </div>
+             <div class="tender-text">
+                 <b>Raw Material Supplier for Packet Meat Producing Company</b>
+             </div>
         </div>
         <div class="tender-ads">
-             <div class="tender-img"></div>
-             <div class="tender-text"></div>
+             <div class="tender-img">
+                <img src="{% static '/image/book.jpg' %}" alt="">
+             </div>
+             <div class="tender-text">
+                 <b>Printing bool 1000pcs , 500 pages</b>
+             </div>
         </div>
     </section>
     </div>

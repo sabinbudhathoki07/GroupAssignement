@@ -1,0 +1,28 @@
+{% extends "dashboard_layout.html" %}
+{% block content %}
+{% load static %}
+    <section class="page-content">
+        <h1>MY ACCOUNT  </h1>
+        <div class="Account-detail">
+        <form id="user-form" method="post" action="/update_user/{{ users.id }}" enctype="multipart/form-data">
+            {% csrf_token %}
+                <label>Email Address</label><br>
+                <input type="email" name="Email" id="Email" placeholder="Email" value="{{users.Email}}"><br>
+                <label>Phone No.</label><br>
+                <input type="text" name="Phone_No" id="phoneno." placeholder="phoneno." value="{{users.Phone_No}}"><br>
+                <label>Password</label><br>
+                <input type="password" name="Password" id="Password" placeholder="Password" ><br>
+                <label>Re_type Password</label><br>
+                <input type="password" name="Confirm_Password" id="Confirm_Password" placeholder="Re_type Password" ><br>
+                <label>Company Name</label><br>
+                <input type="text" name="Company_name" id="Company_name" placeholder="Company_name" value="{{users.Company_name}}"><br>
+                <label>Update Profile Picture</label>
+                <input type="file" name="image" >
+                <button>Update</button>
+        </form>
+        <form action="/delete_user/{{users.id}}">
+            <button>Remove Account</button>
+        </form>
+        </div>
+    </section>
+{% endblock %}

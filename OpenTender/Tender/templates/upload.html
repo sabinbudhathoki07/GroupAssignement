@@ -1,5 +1,6 @@
 {% extends "dashboard.html" %}
 {% block content %}
+{% load static %}
 <section class="page-content">
     <h1>Upload Your Tender Post</h1>
     <form class="upload-form" method="post" action="/upload" enctype="multipart/form-data">
@@ -25,7 +26,7 @@
             <option value="Small">Small</option>
         </Select><br>
         <label for="">Entry_Fee</label><br> 
-        <input type="number" name="Entry_Fee" id="Entry_Fee"><br>
+        <input type="number" name="Entry_Fee" id="Entry_Fee" ><br>
         <label for=""> Rules_Regulation</label><br>
         <input type="text" name="Rules_Regulation"><br>
         <label for="">Tender_Image</label> <br> 

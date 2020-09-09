@@ -1,33 +1,26 @@
 *{
     padding: 0;
     margin: auto;
-    
     font-family: sans-serif;
 }
 body{
-    width: 100%;
+    width: 1360px;
 }
 /*header*/
 header{
-    overflow: hidden;
     width: 100%;
+    height: auto;
 }
 .top{
-    height: 130px;
+    height: auto;
     background-color:#ffff;
     width: 100%;
-}
-@media screen and (max-width: 340px) {
-  .top{
-    height: 10px;
-    background-color:#ffff;
-    width: 100%;
-    margin-top: -50px;
-}
+    overflow: hidden;
 }
 .social-media{
     float: left;
     width:400px;
+    height: auto;
     margin-left: 100px;
 }
 .fa{
@@ -42,6 +35,21 @@ header{
 .fa:hover {
     opacity: 0.7;
 }
+@media only screen and (max-width: 400px){
+    .social-media{
+        float: none;
+        margin:0;
+        width: 100%;
+        height: 40px;
+    }
+    .fa{
+        margin: 20px 10px 0 0;
+        float: none;
+      }
+    .fa-instagram{
+        padding-left:120px ;
+    }
+}
 .tender-logo{
     height: 130px;
     width: 230px;
@@ -54,102 +62,112 @@ header{
     max-height: 100%;
     display: block;
 }
-
-@media screen and (max-width: 340px) {
-  .tender-logo{
-    height: 70px;
-    width: 70px;
-    background: inherit;
-    float: left;
-    margin-left: 125px;
-    margin-top: 5px;
+@media only screen and (max-width: 400px){
+    .tender-logo{
+        height: 130px;
+        width: 100%;
+        float: none;
+    }
+    .tender-logo img{
+        margin-left: 80px;
+    }
 }
-}
-
 .btn{
     float: left;
     height: 40px;
     width: 110px;
     margin: 40px 0 0 380px;
 }
-
-@media screen and (max-width: 340px) {
-.btn {
-    float: left;
-    height: 40px;
-    width: 100%;
-    margin-left: 115px;
-}
-}
-
 .btn button{
     height: inherit;
     width: inherit;
     background-color: #fff;
-    border-color:rgb(22, 114, 175) ;
+    border:2px solid blue ;
     border-radius: 3px;
 }
 .btn a{
     text-decoration: none;
 }
-@media screen and (max-width: 340px) {
-.btn a {
-    text-decoration: none;
-    float: left;
-    margin-top: -55px;
-}
+@media only screen and (max-width: 400px){
+    .btn{
+        float: none;
+        height: 40px;
+        width: 400px;
+        margin:0 0 5px 0;
+        display: flex;
+        justify-items: center;
+    }
+    .btn button{
+        height: inherit;
+        width: 110px;
+        background-color: #fff;
+        border:2px solid blue ;
+        border-radius: 3px;
+    }
 }
 /*navbar*/
 nav{
-    width: 100%;
+    width: 100% ;
     height: 50px;
     background-color:rgb(22, 114, 175);
     float: left;
 }
-@media screen and (max-width: 340px) {
-nav {
-    width: 100%;
-    height: 50px;
-    background-color: rgb(22, 114, 175);
-    float: left;
-    margin-top: -45;
-}
-}
-.menu{
-    height: inherit;
+.navbar{
+    height: auto;
     width: 550px;
     background-color: inherit;
     float: left;
     margin-left: 90px;
+    overflow: hidden;
+	z-index:2;
 }
-
-@media screen and (max-width: 340px) {
-
-    .menu {
-    height: inherit;
-    width: 100%;
-    background-color: inherit;
-    float: left;
-    margin-left: 5px;
-}
-}
-.menu a{
+.navbar a{
     font-size: 20px;
     line-height: 50px;
     margin-left: 20px;
     text-decoration: none;
     color: ivory;
+    text-transform: uppercase;
+    float: left;
 }
-@media screen and (max-width: 340px) {
-
-.menu a {
-    font-size: 10;
-    line-height: 50px;
-    margin-left: 15px;
-    text-decoration: none;
-    color: ivory;
+.icon{
+    display: none;
 }
+@media screen and (max-width: 400px) {
+    .navbar{
+        width: 400px;
+        margin: 0;
+    }
+	.navbar a:not(:first-child){
+		display: none;
+	}
+	.navbar a.icon {
+		float: right;
+        display: block;
+        margin-right: 10px;
+	}
 }
+@media screen and (max-width: 600px) {
+	.navbar.responsive {
+		position: relative;
+	}
+  	.navbar.responsive .icon {
+   		position: absolute;
+    	right: 0;
+    	top: 0;
+ 	 }
+  	.navbar.responsive a {
+		display: block;
+    	float: none;
+        text-align: left;	
+ 	 }
+}
+/*sticky nav*/
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+  }
 /*search bar*/
 form.search{
     height: inherit;
@@ -158,15 +176,6 @@ form.search{
     float: right;
     margin-right: 90px;
 }
-@media screen and (max-width: 340px) {
-form.search {
-height: 36px;
-    width: 400px;
-    background-color: inherit;
-    float: left;
-}
-}
-
 form.search input{
     width: 400px;
     height: 30px;
@@ -177,35 +186,18 @@ form.search input{
     border-style: none;
     float: left;
 }
-@media screen and (max-width: 340px) {
-form.search input {
-    width: 200px;
-    height: 30px;
-    border-radius: 7px;
-    margin-top: 2px;
-    font-size: 10px;
-    padding-left: 10px;
-    border-style: none;
-    float: left;
-    margin-left: 35px;
-}
-}
 form.search button{
-    height: inherit;
-    width: 100px;
+    height: 40;
+    width: 50px;
     background-color: inherit;
     border-style: none  ;
 }
-@media screen and (max-width: 340px) {
-    form.search button{
-        height: inherit;
-    width: 10px;
-    background-color: inherit;
-    border-style: none;
-    margin-left: 18px;
+svg{
+    height: 22px;
+    width: 22px;
+    padding: 12px 0 0 0;
+    fill:white;
 }
-    }
-/*news slider*/
 .breaking-news{
     height: 40px;
     width: 90%;
@@ -213,19 +205,21 @@ form.search button{
     background-color: rgb(35, 35, 37);
     padding:0 5% 0 5%;
 }
-@media screen and (max-width: 340px) {
-.breaking-news {
-    height: 40px;
-    width: 90%;
-    float: left;
-    background-color: rgb(35, 35, 37);
-    padding: 0 5% 0 5%;
-    margin-top: 38;
-}
-}
 .breaking-news marquee{
     color: #fff;
     line-height: 40px;
+}
+@media screen and (max-width: 400px) {
+    .breaking-news{
+        height: 40px;
+        width:400px;
+        float: left;
+        padding:0;  
+    }
+    .breaking-news marquee{
+        color: #fff;
+        line-height: 40px;
+    }
 }
 /*footer*/
 footer{
@@ -263,6 +257,11 @@ footer hr{
     text-decoration: none;
     color: ivory;
 }
+@media screen and (max-width: 400px) {
+    .flex-menu{
+        display: none;
+    }
+}
 /*footer-description*/
 .footer-description{
     height: 180px;
@@ -276,6 +275,15 @@ footer hr{
     color: #fff;
     padding-top: 10px;
     text-decoration: underline;
+}
+@media screen and (max-width: 400px) {
+    .footer-description{
+        height: auto;
+        width: 100%;
+        display: block;
+        margin:0;
+        padding: 0;
+    }
 }
 /*about us*/
 .footer-aboutus p{
@@ -301,6 +309,17 @@ footer hr{
     text-decoration: underline;
     color: #fff;
 }
+@media screen and (max-width: 400px) {
+    .footer-aboutus{
+        width: 370px;
+        float: none;
+        margin-left: 15px;
+        padding:0 ;
+    }
+    .footer-aboutus p{
+        width: inherit;
+    }
+}
 /*company*/
 .footer-company{
     width: 260px;
@@ -313,9 +332,23 @@ footer hr{
    text-decoration: none;
    color: ivory;
    display: block;
-   float: none;
+   float: left;
    font-size: 14px;
    margin-top: 5px;
+}
+@media screen and (max-width: 400px) {
+    .footer-company{
+        width: 100%;
+        float: none;
+        padding: 0;
+        margin-left: 15px;
+    }
+    .footer-company a{
+       float: none;
+       font-size: 14px;
+       margin-top: 5px;
+       padding-left: 20px;
+    }
 }
 /*contact*/
 .footer-contact{
@@ -344,6 +377,25 @@ footer hr{
     margin-top: 5px;
     float: left;
 }
+@media screen and (max-width: 400px) {
+    .footer-contact{
+        width: 280px;
+        margin: 15px;
+        float: left;
+    }
+    .footer-contact li{
+        color: #fff;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    .footer-contact i{
+        font-size: 14px;
+    }
+    .footer-contact a{
+        margin-top: 5px;
+        padding: 0;
+    }
+}
 /*copyright*/
 .copyright-container{
     height: 30px;
@@ -354,4 +406,18 @@ footer hr{
     text-align: center;
     color: #fff;
     font-size: 15px;
+}
+@media screen and (max-width: 400px) {
+    .copyright-container{
+        width: 100%;
+        height: 30px;
+        float: none;
+    }
+    .copyright-container p{
+        line-height: 30px;
+        color: #fff;
+        font-size: 15px;
+        float: left;
+        padding-left: 60px;
+    }
 }

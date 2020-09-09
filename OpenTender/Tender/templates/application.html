@@ -1,0 +1,28 @@
+{% extends "dashboard_layout.html" %}
+{% block content %}
+{% load static %}
+<section class="page-content">
+    <h1>Application  </h1>
+    <div class="applicant">
+        <table class="applicant-table">
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Company Name</th>
+                <th>Address</th>
+                <th>Applicant</th>
+            </tr>
+            {% for applicant in applicants %}
+            <tr>
+                <td>{{applicant.id}}</td>
+                <td>{{applicant.Email}}</td>
+                <td>{{applicant.Company_Name}}</td>
+                <td>{{applicant.Address}}</td>
+                <td>{{applicant.user}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+       
+    </div>
+    </section>
+{% endblock  %}

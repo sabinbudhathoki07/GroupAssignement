@@ -70,3 +70,6 @@ table, th, td{
    background-color: blue;
    color: #fff;
 }
+#foreign{
+    display: none;
+}

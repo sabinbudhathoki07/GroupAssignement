@@ -1,0 +1,43 @@
+.Account-detail{
+    height: 20px;
+    width: 900px;
+    background-color: transparent;
+    margin: 0 0 0 -200px;
+}
+#user-form{
+    width: 530px;
+    height: 90vh;
+    background-color: rgba(231, 236, 236, 0.9);
+    float: left;
+    border-radius: 10px;
+    color: black;
+    padding:20px 0 0 30px;
+}
+#user-form label{
+    font-size: 14px;
+    color: #000;
+    text-decoration: none;
+    float: left;
+}
+#user-form input{
+    height: 40px;
+    width: 470px;
+    border-top:none;
+    border-left: none;
+    border-right: none;
+    background-color: transparent;
+    margin-bottom: 10px;
+    outline-style: none;
+    color: #000;
+    border-bottom: 1px solid black;
+}
+#user-form button{
+    margin: 30px 0 0 170px;
+    height: 50px;
+    width: 120px;
+    color: #fff;
+    background-color: blue;
+    border: none;
+    outline-style: none;
+    border-radius: 5px;
+}

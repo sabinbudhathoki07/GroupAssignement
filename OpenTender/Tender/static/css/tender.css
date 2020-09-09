@@ -5,15 +5,17 @@
     width: 85%;
     margin: auto;
 }
-.tender-main a{
-    height: 40px;
-    width: 200px;
-    margin: 30px 30px 0 0;
-    background-color:inherit;
-    font-size: 18px;
-    float: left;
-    text-decoration: underline;
-    font-weight: bold;
+@media screen and (max-width: 400px) {
+    .tender-main{
+        height: auto;
+        width: 100%;
+        margin: 0;
+        float: left;
+    }
+    .tender-main h1{
+        font-size: 20px;
+        padding: 10px;
+    }
 }
 .tender-main a:hover{
     font-size: 20px;
@@ -33,16 +35,39 @@
     background-color: rgb(170, 168, 168);
     display: block;
 }
+@media screen and (max-width: 400px) {
+    .current-tender{
+        width: 400px;
+        height: auto;
+        margin-top: 10px;
+        display: block;
+        float: left;
+    }
+    .tender-display{
+        width: 370px;
+        height: 700px;
+        background-color: rgb(170, 168, 168);
+        display: block;
+        float:none;
+        margin-left: 15px;
+    }
+}
 /*heading*/
 .tender-display h2{
     padding:5px 0 0 20px ;
     color: #000;
 }
+@media screen and (max-width: 400px) {
+    .tender-display h2{
+        padding:5px 0 0 20px ;
+        color: #000;
+    }
+}
 /*image section*/
 .tender-image{
     height:300px ;
     width: 91%;
-    background-color: yellow;
+    background-color: transparent;
     margin-top: 20px;
 }
 .tender-image img{
